@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    font-style: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    background-color: #f4f4f4;
+}
+
+nav {
+    height: 10vh;
+    display: grid;
+    place-items: center;
+    background-color: rgb(77, 77, 77);
+
+    .form {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .input {
+            font-size: 1.2rem;
+            background-color: rgb(77, 77, 77);
+            color: #f4f4f4;
+            width: 3ch;
+            border: none;
+            outline: none;
+            border-bottom: solid 1px black;
+        }
+
+        input::placeholder {
+            color: #f4f4f4;
+        }
+
+        input:invalid {
+            border-bottom: solid 1px rgb(202, 108, 108);
+        }
+
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .label, .generate {
+            color: #f4f4f4;
+            font-size: 1.2rem;
+            padding: 0 0.3rem 0 0.3rem;
+            margin: 0 0.3rem 0 0.3rem;
+        }
+
+        .generate {
+            width: 10ch;
+            background-color: rgb(86, 148, 86);
+            border: none;
+            border-radius: 0.5rem;
+            outline: none;
+            margin: 0.3rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.centering {
+    display: grid;
+    height: 90vh;
+    place-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(32, 24px);
+    grid-template-columns: repeat(32, 24px);
+}
